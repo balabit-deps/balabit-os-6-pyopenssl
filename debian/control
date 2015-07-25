@@ -1,0 +1,67 @@
+Source: pyopenssl
+Section: python
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Sandro Tosi <morph@debian.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), python-all, python3-all, dh-python, libssl-dev (>= 0.9.8), openssl, python-sphinx (>= 1.0.7+dfsg), python-setuptools, python3-setuptools, python-cryptography (>= 0.7), python3-cryptography (>= 0.7), python-six, python3-six
+Standards-Version: 3.9.6
+Homepage: https://github.com/pyca/pyopenssl
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyopenssl/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pyopenssl/trunk/
+XS-Python-Version: all
+X-Python3-Version: >= 3.2
+
+Package: python-openssl
+Architecture: all
+Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-cryptography (>= 0.7)
+Suggests: python-openssl-doc, python-openssl-dbg
+Description: Python 2 wrapper around the OpenSSL library
+ High-level wrapper around a subset of the OpenSSL library, includes
+ .
+   * SSL.Connection objects, wrapping the methods of Python's portable
+     sockets
+   * Callbacks written in Python
+   * Extensive error-handling mechanism, mirroring OpenSSL's error
+     codes
+ .
+ A lot of the object methods do nothing more than calling a
+ corresponding function in the OpenSSL library.
+
+Package: python-openssl-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Suggests: python-openssl, python3-openssl
+Description: Python wrapper around the OpenSSL library (documentation package)
+ High-level wrapper around a subset of the OpenSSL library, includes
+ .
+   * SSL.Connection objects, wrapping the methods of Python's portable
+     sockets
+   * Callbacks written in Python
+   * Extensive error-handling mechanism, mirroring OpenSSL's error
+     codes
+ .
+ A lot of the object methods do nothing more than calling a
+ corresponding function in the OpenSSL library.
+ .
+ This package contains documentation for python-openssl.
+
+Package: python3-openssl
+Architecture: all
+Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends}, python3-cryptography (>= 0.7)
+Suggests: python-openssl-doc, python3-openssl-dbg
+Description: Python 3 wrapper around the OpenSSL library
+ High-level wrapper around a subset of the OpenSSL library, includes
+ .
+   * SSL.Connection objects, wrapping the methods of Python's portable
+     sockets
+   * Callbacks written in Python
+   * Extensive error-handling mechanism, mirroring OpenSSL's error
+     codes
+ .
+ A lot of the object methods do nothing more than calling a
+ corresponding function in the OpenSSL library.
+ .
+ This package contains the Python 3 version of pyopenssl.
+
