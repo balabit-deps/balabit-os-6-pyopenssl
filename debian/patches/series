@@ -1,1 +1,4 @@
 disable_test_set_default_verify_paths.patch
+CVE-2018-100080x-pre.patch
+CVE-2018-100080x.patch
+update_certs.patch
